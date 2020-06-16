@@ -1,0 +1,48 @@
+
+html {
+  @media screen and (max-width: $desktopWidth) {
+		font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+		font-size: 14px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+		font-size: 12px;
+  }
+  @media screen and (max-width: $smPhoneWidth) {
+		font-size: 10px;
+  }
+}
+
+.list-group-item {
+	.btn-item {
+		@media screen and (max-width: $tableWidth) {
+			width: $smWidthBtn;
+			height: $smWidthBtn;
+		}
+		@media screen and (max-width: $smPhoneWidth) {
+			width: $phoneWidthBtn;
+			height: $phoneWidthBtn;
+		}
+		&-important, &-done {
+			i {
+				@media screen and (max-width: $tableWidth) {
+					font-size: $smWidthBtn;
+				}
+				@media screen and (max-width: $smPhoneWidth) {
+					font-size: $phoneWidthBtn;
+				}
+			}
+		}
+		&-important {
+			@media screen and (max-width: $phoneWidth){
+				right: 7%;
+			}
+		}
+		&-done {
+			@media screen and (max-width: $phoneWidth){
+				right: 14%;
+			}
+		}
+	}
+}

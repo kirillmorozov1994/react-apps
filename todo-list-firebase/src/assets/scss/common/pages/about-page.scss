@@ -1,0 +1,32 @@
+.about-appear {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.about-appear-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 500ms 2500ms, transform 500ms 2500ms;
+}
+
+.about-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.about-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.about-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.about-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 500ms, transform 500ms;
+}

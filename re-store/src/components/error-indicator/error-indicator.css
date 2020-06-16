@@ -1,0 +1,15 @@
+.error-indicator {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.error-indicator span {
+	font-style: italic;
+}
+
+.error-indicator .boom {
+	font-weight: bold;
+	font-size: 20px;
+	font-style: normal;
+}

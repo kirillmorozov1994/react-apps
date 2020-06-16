@@ -1,0 +1,121 @@
+.list-group-item {
+	position: relative;
+	& .important {
+		color: #dc3545;
+	}
+	& .done {
+		text-decoration: line-through;
+		color: #28a745;
+	}
+	& .notes {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	.btn-item {
+		position: absolute;
+		top: 0;
+		right: 0;
+		border-radius: 0;
+		display: flex;
+		padding: 0;
+		width: $widthButton;
+		height: $widthButton;
+		background: none;
+		outline: none;
+		border: none;
+		&-close {
+			top: 10%;
+			right: 1%;
+			&:hover {
+				&::before, &::after{
+					opacity: 1;
+				}
+				&::before {
+					transform: translate(-50%, -50%) rotate(135deg);
+				}
+				&::after {
+					transform: translate(-50%, -50%) rotate(225deg);
+				}
+			}
+			&::before, &::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 100%;
+				height: 1px;
+				background-color: #333;
+				border-radius: 2px;
+				transform: translate(-50%, -50%) rotate(45deg);
+				opacity: 0.7;
+				transition: all .5s;
+			}
+			&::after {
+				transform: translate(-50%, -50%) rotate(135deg)
+			}
+		}
+		&-important {
+			top: 10%;
+			right: 5%;
+			.important-active {
+				color: rgba($color: #dc3545, $alpha: 1);
+			}
+			i {
+				color: rgba($color: #dc3545, $alpha: 0.5);
+				font-size: 20px;
+				&:hover {
+					color: rgba($color: #dc3545, $alpha: 1);
+				}
+			}
+		}
+		&-done {
+			top: 10%;
+			right: 9%;
+			.done-active {
+				color: rgba($color: #28a745, $alpha: 1);
+			}
+			i {
+				color: rgba($color: #28a745, $alpha: 0.5);
+				font-size: 20px;
+				&:hover {
+					color: rgba($color: #28a745, $alpha: 1);
+				}
+			}
+		}
+	}
+}
+
+.todo-item-appear {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.todo-item-appear-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.todo-item-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.todo-item-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.todo-item-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.todo-item-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 500ms, transform 500ms;
+}
+
