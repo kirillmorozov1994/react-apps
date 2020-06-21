@@ -1,0 +1,73 @@
+@import '../utils/variables';
+
+.spinner {
+	animation: rotate 2s linear infinite normal;
+	height: 1rem;
+	position: relative;
+	width: 1rem;
+
+	&-box {
+		width: 102%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 5rem;
+		overflow: hidden;
+	}
+
+	&-ball {
+		animation: move1 1s ease-out infinite alternate;
+		background-color: $colorDark;
+		border-radius: 50%;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+
+		&:nth-of-type(2) {
+			animation-name: move2;
+		}
+
+		&:nth-of-type(3) {
+			animation-name: move3;
+		}
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes move1 {
+	0%,
+	5% {
+		transform: translate(0, 0);
+	}
+	to {
+		transform: translate(0, -100%);
+	}
+}
+
+@keyframes move2 {
+	0%,
+	5% {
+		transform: translate(0, 0);
+	}
+	to {
+		transform: translate(100%, 100%);
+	}
+}
+
+@keyframes move3 {
+	0%,
+	15% {
+		transform: translate(0);
+	}
+	to {
+		transform: translate(-100%, 100%);
+	}
+}

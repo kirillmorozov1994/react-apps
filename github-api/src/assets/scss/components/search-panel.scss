@@ -1,0 +1,28 @@
+@import '../utils/variables';
+@import '../utils/fonts';
+
+.search {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 20px;
+	&-label {
+		@include fontFamily(400);
+		margin-right: 20px;
+	}
+	&-input {
+		border: $borderStyle;
+		outline: none;
+		padding: 5px;
+		width: 75%;
+		border-radius: 10px;
+		text-align: center;
+		transition: box-shadow 0.3s ease-in-out;
+		@include fontFamily(400);
+		&:focus {
+			box-shadow: 0 0 3px 1px $colorPrimary;
+		}
+	}
+}

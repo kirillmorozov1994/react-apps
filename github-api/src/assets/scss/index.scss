@@ -1,0 +1,23 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+}
+
+.container {
+	overflow-x: hidden;
+	margin: 0 auto;
+	padding-top: 7vh;
+	padding-bottom: 7vh;
+	height: 100vh;
+}
+
+@import './common';
+@import './utils/_media';

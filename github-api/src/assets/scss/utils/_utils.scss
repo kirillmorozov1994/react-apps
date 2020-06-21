@@ -1,0 +1,9 @@
+//btn
+@mixin btnConstructor($bgColor, $colorText, $padding) {
+	padding: $padding;
+	background-color: $bgColor;
+	outline: none;
+	border: none;
+	color: $colorText;
+	box-shadow: 0 0 1px 1px rgba($color: $colorDark, $alpha: 0.4);
+}

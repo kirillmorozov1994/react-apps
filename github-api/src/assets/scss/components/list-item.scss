@@ -1,0 +1,44 @@
+@import '../utils/variables';
+@import '../utils/fonts';
+
+.list-item {
+	display: flex;
+	align-items: center;
+	padding: 5px;
+	box-shadow: 0 0 1px 1px $colorDark;
+	@include fontFamily(400);
+	width: 100%;
+	&:first-child {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	&:last-child {
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	&-text {
+		padding: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&-name {
+		flex-basis: 35%;
+	}
+	&-stars {
+		flex-basis: 12%;
+		img {
+			margin-top: -4px;
+			margin-right: 5px;
+		}
+	}
+	&-date {
+		flex-basis: 28%;
+	}
+	&-link {
+		flex-basis: 25%;
+	}
+	&:hover {
+		background-color: rgba($color: $colorDark, $alpha: 0.1);
+	}
+}

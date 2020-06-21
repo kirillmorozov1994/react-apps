@@ -1,0 +1,255 @@
+@import './variables';
+
+@media screen and (min-width: 576px), (max-width: 575px) {
+	html,
+	.btn {
+		font-size: $fontSizeMainSmall;
+		.header {
+			&-title {
+				font-size: $fontSizeTitleSmall;
+			}
+		}
+		.container {
+			max-width: $widthContainerSmall;
+			.search {
+				flex-direction: column;
+				&-input {
+					font-size: $fontSizeMainSmall;
+				}
+			}
+			.list-item {
+				flex-direction: column;
+			}
+			.cart {
+				flex-direction: column;
+				&-user {
+					flex-basis: 100%;
+					&-nikName {
+						font-size: $fontSizeTitleMedium;
+					}
+				}
+				&-repos {
+					flex-basis: 100%;
+					&-text {
+						&__name {
+							font-size: $fontSizeTitleEl;
+						}
+						&__desc {
+							font-size: $fontSizeMainMedium;
+						}
+						&__date {
+							font-size: $fontSizeMainMedium;
+						}
+					}
+					&-desc {
+						&__stars {
+							div {
+								font-size: $fontSizeMainMedium;
+							}
+						}
+						&__lang {
+							font-size: $fontSizeMainMedium;
+						}
+						&__contr {
+							font-size: $fontSizeMainSmall;
+							margin-top: 10px;
+						}
+					}
+				}
+			}
+		}
+		.not-found {
+			flex-direction: column;
+			&-content {
+				&__title {
+					font-size: $fontSizeTitleMedium;
+				}
+				&__wrapper {
+					font-size: $fontSizeTitleSmall;
+				}
+				&__arrow {
+					right: 40%;
+					top: 100%;
+					transform: translateY(-50%) rotate(45deg);
+				}
+			}
+		}
+		.footer {
+			&-created {
+				flex-basis: 30%;
+			}
+			&-contacts {
+				flex-basis: 70%;
+				&-author {
+					font-size: 9px;
+				}
+				&__wrapper {
+					&-element {
+						width: 20px;
+						height: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 768px) {
+	html,
+	.btn {
+		font-size: $fontSizeMainMedium;
+		.header {
+			&-title {
+				font-size: $fontSizeTitleMedium;
+			}
+		}
+		.container {
+			max-width: $widthContainerMedium;
+			.search {
+				flex-direction: row;
+				&-input {
+					font-size: $fontSizeMainMedium;
+				}
+			}
+			.list-item {
+				flex-direction: row;
+			}
+			.cart {
+				flex-direction: row;
+				&-user {
+					flex-basis: 50%;
+					&-nikName {
+						font-size: $fontSizeTitleEl;
+					}
+				}
+				&-repos {
+					flex-basis: 50%;
+					&-text {
+						&__name {
+							font-size: $fontSizeHyperBig;
+						}
+						&__desc {
+							font-size: $fontSizeMainEl;
+						}
+						&__date {
+							font-size: $fontSizeMainEl;
+						}
+					}
+					&-desc {
+						&__stars {
+							div {
+								font-size: $fontSizeMainEl;
+							}
+						}
+						&__lang {
+							font-size: $fontSizeMainEl;
+						}
+						&__contr {
+							font-size: $fontSizeMainEl;
+							margin-top: 10px;
+						}
+					}
+				}
+			}
+		}
+		.not-found {
+			flex-direction: row;
+			&-content {
+				&__title {
+					font-size: $fontSizeTitleEl;
+				}
+				&__wrapper {
+					font-size: $fontSizeTitleMedium;
+				}
+				&__arrow {
+					right: 0;
+					top: 20%;
+					transform: translateX(50%) rotate(45deg);
+				}
+			}
+		}
+		.footer {
+			&-created {
+				flex-basis: 50%;
+			}
+			&-contacts {
+				&-author {
+					font-size: 16px;
+				}
+				flex-basis: 50%;
+				&__wrapper {
+					&-element {
+						width: 25px;
+						height: 25px;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 992px) {
+	html,
+	.btn {
+		font-size: $fontSizeMainLarge;
+		.header {
+			&-title {
+				font-size: $fontSizeTitleLarge;
+			}
+		}
+		.container {
+			max-width: $widthContainerLarge;
+			.search {
+				&-input {
+					font-size: $fontSizeMainLarge;
+				}
+			}
+			&-content {
+				&__title {
+					font-size: $fontSizeTitleEl;
+				}
+			}
+		}
+		.not-found {
+			flex-direction: row;
+			&-content {
+				&__title {
+					font-size: $fontSizeHyperBig;
+				}
+				&__wrapper {
+					font-size: $fontSizeTitleEl;
+				}
+			}
+		}
+		.footer {
+			&-contacts {
+				&-author {
+					font-size: 18px;
+				}
+				&__wrapper {
+					&-element {
+						width: 30px;
+						height: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 1200px) {
+	html,
+	.btn {
+		font-size: $fontSizeMainEl;
+		.header {
+			&-title {
+				font-size: $fontSizeTitleEl;
+			}
+		}
+		.container {
+			max-width: $widthContainerEl;
+			.search {
+				&-input {
+					font-size: $fontSizeMainEl;
+				}
+			}
+		}
+	}
+}

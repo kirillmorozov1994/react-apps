@@ -1,0 +1,176 @@
+@import '../utils/variables';
+@import '../utils/_fonts';
+
+.cart {
+	width: 100%;
+	overflow-x: hidden;
+	padding: 10px;
+	padding-top: 40px;
+	display: flex;
+	&-user {
+		flex-basis: 50%;
+		height: 100%;
+		padding: 20px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		&-wrap {
+			border-radius: 10px;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+				transition: all 0.5s ease-in-out;
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+		}
+		&-nikName {
+			@include fontFamily(700);
+			font-size: $fontSizeTitleEl;
+			margin-top: 10px;
+			a {
+				position: relative;
+				text-decoration: none;
+				color: $colorDark;
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: 15%;
+					left: 0;
+					width: 100%;
+					height: 2px;
+					background-color: $colorDark;
+					transform-origin: right;
+					transform: scaleX(0);
+					transition: all 0.3s ease-in-out;
+				}
+				&:hover::after {
+					transform-origin: left;
+					transform: scaleX(1);
+				}
+			}
+		}
+	}
+	&-repos {
+		flex-basis: 50%;
+		height: 100%;
+		padding: 20px;
+		&-text {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			transform: translateY(-25px);
+			&__name {
+				@include fontFamily(700);
+				font-size: $fontSizeHyperBig;
+				width: 100%;
+				a {
+					text-decoration: none;
+					color: $colorDark;
+				}
+			}
+			&__desc {
+				@include fontFamily(400);
+				font-size: $fontSizeMainEl;
+				color: rgba($color: $colorDark, $alpha: 0.7);
+				&:hover {
+					color: rgba($color: $colorDark, $alpha: 1);
+				}
+			}
+			&__date {
+				@include fontFamily(500);
+				font-size: $fontSizeMainEl;
+			}
+		}
+		&-desc {
+			&__stars {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				margin-bottom: 10px;
+				img {
+					width: 16px;
+					height: 16px;
+					margin-right: 5px;
+				}
+				div {
+					@include fontFamily(500);
+					font-size: $fontSizeMainEl;
+				}
+			}
+			&__lang {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				@include fontFamily(500);
+				font-size: $fontSizeMainEl;
+				ul {
+					list-style: none;
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+					li {
+						position: relative;
+						padding: 5px;
+						padding-left: 30px;
+						margin-right: 10px;
+						a {
+							text-decoration: none;
+							color: $colorDark;
+						}
+						&::after {
+							content: '';
+							position: absolute;
+							top: 50%;
+							left: 5%;
+							transform: translateY(-50%);
+							width: 10px;
+							height: 10px;
+							border-radius: 50%;
+							border: 1px solid $colorDark;
+							transition: all 0.3s ease-in-out;
+						}
+						&:hover {
+							&::after {
+								background-color: $colorDark;
+							}
+						}
+					}
+				}
+			}
+			&__contr {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				@include fontFamily(500);
+				font-size: $fontSizeMainEl;
+				margin-top: 10px;
+				ul {
+					list-style: none;
+					display: flex;
+					flex-wrap: wrap;
+					width: 100%;
+					li {
+						padding: 5px;
+						padding-left: 0;
+						flex-basis: calc(100% / 2);
+					}
+				}
+			}
+		}
+		&-notFound {
+			width: 100%;
+			text-align: center;
+			@include fontFamily(700);
+		}
+	}
+}
