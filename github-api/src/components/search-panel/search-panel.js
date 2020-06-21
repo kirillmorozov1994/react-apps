@@ -7,12 +7,22 @@ import {
 	requestInitRepos,
 	requestEnterRepos,
 } from '../../actions/actions-request'
-import { setCurrentPage } from '../../actions/actions'
+import { setCurrentPage, clearState } from '../../actions/actions'
 import { withContextService } from '../hoc/with-context-service'
 
 class SeachPanel extends Component {
 	componentDidMount() {
 		this.saveChangeReload()
+	}
+
+	componentDidUpdate(prevProps) {
+		const { history, location } = this.props
+		if (
+			history.action === 'POP' &&
+			location.pathname !== prevProps.location.pathname
+		) {
+			this.saveChangeReload()
+		}
 	}
 
 	changeInput = (e) => {
@@ -97,6 +107,7 @@ const mapStateToDispatch = (dispatch, { service, history }) => ({
 	requestEnterRepos: (term) =>
 		dispatch(requestEnterRepos(term, service, history)),
 	setCurrentPage: (page) => dispatch(setCurrentPage(page)),
+	clearState: () => dispatch(clearState()),
 })
 
 export default compose(

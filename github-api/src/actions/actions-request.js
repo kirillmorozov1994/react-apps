@@ -9,6 +9,13 @@ import {
 
 let timeoutId = 0
 
+const validateUrl = (history, targetUrl) => {
+	const currentUrl = history.location.pathname
+	if (currentUrl !== targetUrl) {
+		history.push(targetUrl)
+	}
+}
+
 const requestInitRepos = (term, service, history) => (dispatch, getState) => {
 	dispatch(changeCurrentSearch(term))
 	dispatch(changeLastSearch(term))
@@ -52,9 +59,9 @@ const requestChangePage = (nextOrPrevPage, service, history) => (
 
 const requestRepos = (dispatch, service, term, history, getState) => {
 	if (term === '') {
-		history.push(`/repos/-/${getState().currentPage}`)
+		validateUrl(history, `/repos/-/${getState().currentPage}`)
 	} else {
-		history.push(`/repos/${term}/${getState().currentPage}`)
+		validateUrl(history, `/repos/${term}/${getState().currentPage}`)
 	}
 	dispatch(fetchReposRequest())
 	service

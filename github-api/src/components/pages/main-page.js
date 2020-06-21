@@ -23,7 +23,7 @@ const MainPage = ({ clearState }) => {
 					<span className="arrow-down-element"></span>
 					<span className="arrow-down-element"></span>
 				</div>
-				<Link to="/repos" className="main-content-link">
+				<Link to="/repos/-/1" className="main-content-link">
 					Погнали
 				</Link>
 			</div>
