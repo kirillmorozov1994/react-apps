@@ -1,0 +1,31 @@
+@import './_variables';
+
+.zooming {
+	&-main {
+		&-appear {
+			box-shadow: none !important;
+			&-active {
+				box-shadow: $shadowMain !important;
+				transition: box-shadow 1s 0.5s ease-in-out;
+			}
+		}
+	}
+	&-img {
+		&-appear {
+			transform: translateX(110%);
+			&-active {
+				transform: translateX(0%);
+				transition: transform 1s 1.5s ease-out;
+			}
+		}
+	}
+	&-slider {
+		&-appear {
+			transform: translateX(-110%);
+			&-active {
+				transform: translateX(0%);
+				transition: transform 1s 1.5s ease-out;
+			}
+		}
+	}
+}

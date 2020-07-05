@@ -1,0 +1,12 @@
+$shadowMain: 0 0 5px rgba(0, 0, 0, 0.3);
+$activeItem: brightness(1);
+$passiveItem: brightness(0.3);
+$bgArrow: rgba(3, 3, 3, 0.3);
+$bgArrowHover: rgba(3, 3, 3, 0.6);
+$colorArrow: #fff;
+$hoverArrowItem: 0.2s ease-in;
+$moveSlider: 0.4s ease-in-out;
+$colorBorder: rgba(
+	$color: #eee,
+	$alpha: 0.8,
+);

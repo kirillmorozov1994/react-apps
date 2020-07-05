@@ -11,6 +11,7 @@ const AboutPage = ({ about }) => (
 		<a
 			className="btn btn-outline-primary btn-lg"
 			href="https://github.com/kirillmorozov1994"
+			target="_blank"
 			role="button"
 		>
 			{about.button}
